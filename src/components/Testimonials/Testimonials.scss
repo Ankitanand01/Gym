@@ -52,15 +52,47 @@
             top: 2rem;
         }
 
-        .arrows{
+        .arrows {
             display: flex;
             gap: 1rem;
             position: absolute;
             bottom: 1rem;
             left: 3ren;
-            img{
+
+            img {
                 width: 1.5rem;
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .testimonials {
+        flex-direction: column;
+
+        .left-t{
+            .what {
+                font-size: xx-large;
+            }
+        }
+
+        .right-t{
+            align-items: center;
+            display: flex;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            .empty{
+                position: relative;
+                display: none;
+            }
+            .bannerImage{
+                top: 0;
+                right: 0;
+                position: relative;
+                align-self: center;
             }
         }
     }

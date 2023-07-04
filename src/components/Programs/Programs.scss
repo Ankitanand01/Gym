@@ -4,13 +4,13 @@
     gap: 2rem;
     padding: 0 2rem;
 
-    
 
-    .program-categories{
+
+    .program-categories {
         display: flex;
         gap: 1rem;
 
-        .category{
+        .category {
             display: flex;
             flex-direction: column;
             background-color: gray;
@@ -18,43 +18,64 @@
             gap: 1rem;
             color: white;
             justify-content: space-between;
+
             // :hover{
             //     background: var(--orange);
             // }
-            :nth-child(1){
+            :nth-child(1) {
                 width: 2rem;
                 height: 2rem;
                 fill: white;
             }
 
-            :nth-child(2){
+            :nth-child(2) {
                 font-size: 1rem;
                 font-weight: bold;
             }
 
-            :nth-child(3){
+            :nth-child(3) {
                 font-size: 0.9rem;
                 line-height: 20px;
             }
 
-            .join-now{
+            .join-now {
                 display: flex;
                 align-items: center;
                 gap: 2rem;
-                span{
+
+                span {
                     width: 5rem;
                     align-items: center;
                     height: 1rem;
                 }
-                img{
+
+                img {
                     width: 1rem;
                 }
             }
         }
-        .category:hover{
+
+        .category:hover {
             background: var(--planCard);
             cursor: pointer;
         }
-        
+
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Programs {
+        .programs-header {
+            flex-direction: column;
+            gap: 1rem;
+            font-size: x-large;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .program-categories{
+            flex-direction: column;
+        }
     }
 }

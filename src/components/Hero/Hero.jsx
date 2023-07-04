@@ -5,15 +5,19 @@ import hero_image from '../../assets/hero_image.png';
 import hero_image_back from '../../assets/hero_image_back.png';
 import Heart from '../../assets/heart.png';
 import Calories from '../../assets/calories.png';
+import { motion } from 'framer-motion';
+import Ncount from 'number-counter';
 const Hero = () => {
+    const transitionEff = { type: "spring", duration: 2 }
+    const mobile =window.innerWidth<=768 ? true :false;
     return (
         <div className="hero">
-        <div className="blur hero-blur"></div>
+            <div className="blur hero-blur"></div>
             <div className="left-hero">
                 <Header />
 
                 <div className="the-ad">
-                    <div></div>
+                    <motion.div initial={{ left: mobile? "145px": '325px' }} whileInView={{ left: '8px' }} transition={{ ...transitionEff, type: 'tween' }}></motion.div>
                     <span>Lorem ipsum dolor sit amet consectetur.</span>
                 </div>
 
@@ -33,15 +37,15 @@ const Hero = () => {
 
                 <div className="images">
                     <div>
-                        <span>+140</span>
+                        <span><Ncount end={140} start={80} delay='3' preFix="+"></Ncount></span>
                         <span>expert coches</span>
                     </div>
                     <div>
-                        <span>+978</span>
+                        <span><Ncount end={978} start={700} delay='3' preFix="+"></Ncount></span>
                         <span>members joined</span>
                     </div>
                     <div>
-                        <span>+5</span>
+                        <span><Ncount end={40} start={20} delay='3' preFix="+"></Ncount></span>
                         <span>fitness programs</span>
                     </div>
                 </div>
@@ -60,15 +64,22 @@ const Hero = () => {
                 </div>
 
                 <img className='hero-image' src={hero_image} alt="" />
-                <img className='hero-image-back' src={hero_image_back} alt="" />
+                <motion.img
+                    initial={{ right: '11rem' }} whileInView={{ right: '20rem' }} transition={{ ...transitionEff, type: 'tween' }}
+                    className='hero-image-back' src={hero_image_back} alt="" />
 
-                <div className="calories">
+                <motion.div
+                    initial={{ right: "37rem" }}
+                    whileInView={{ right: "28rem" }}
+                    // transition={{transitionEff}}
+                    transition={{ ...transitionEff, type: 'tween' }}
+                    className="calories">
                     <img src={Calories} alt="" />
                     <div>
                         <span>Calories Burned</span>
                         <span>220 kcal</span>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
