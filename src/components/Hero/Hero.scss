@@ -2,6 +2,12 @@
     display: flex;
     justify-content: space-between;
 
+    .hero-blur {
+        width: 22rem;
+        height: 30rem;
+        left: 0;
+    }
+
     .left-hero {
         padding: 2rem;
         padding-top: 1.5rem;
@@ -122,6 +128,7 @@
             position: absolute;
             right: 4rem;
             top: 7rem;
+
             :nth-child(1) {
                 width: 2rem;
             }
@@ -143,7 +150,7 @@
             width: 23rem;
         }
 
-        .hero-image-back{
+        .hero-image-back {
             position: absolute;
             top: 4rem;
             right: 20rem;
@@ -151,7 +158,7 @@
             width: 15rem;
         }
 
-        .calories{
+        .calories {
             display: flex;
             gap: 2rem;
             background-color: var(--caloryCard);
@@ -162,18 +169,20 @@
             top: 32rem;
             right: 28rem;
 
-            img{
+            img {
                 width: 3rem;
             }
-            div{
+
+            div {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
-                :nth-child(1){
+                :nth-child(1) {
                     color: var(--gray);
                 }
-                :nth-child(2){
+
+                :nth-child(2) {
                     color: white;
                     font-size: 1.5rem;
                 }

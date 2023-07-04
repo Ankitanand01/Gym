@@ -1,0 +1,67 @@
+.testimonials {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    .left-t {
+        display: flex;
+        flex: 1 1;
+        ;
+        gap: 2rem;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+
+        .small {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .what {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        .testData {
+            text-transform: none;
+            text-align: justify;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+    }
+
+    .right-t {
+        flex: 1;
+        position: relative;
+
+        .empty {
+            position: absolute;
+            width: 17rem;
+            border: 2px solid orange;
+            height: 20rem;
+            right: 9rem;
+            top: 0.9rem;
+        }
+
+        .bannerImage {
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            object-fit: cover;
+            right: 8rem;
+            top: 2rem;
+        }
+
+        .arrows{
+            display: flex;
+            gap: 1rem;
+            position: absolute;
+            bottom: 1rem;
+            left: 3ren;
+            img{
+                width: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
